@@ -1,24 +1,21 @@
-from tkinter import ttk
-import tkinter as tk
-from tkinter import messagebox, filedialog
-from tkinter import ttk
-import pandas as pd
-import requests
-import time
+import cmath
+import json
 import os
 import sys
-import json
-import cmath
 import threading
+import time
+import tkinter as tk
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from tkinter import filedialog, messagebox, ttk
+
+import pandas as pd
+import requests
 
 if getattr(sys, "frozen", False):
     Current_Path = os.path.expanduser("~")
 else:
     Current_Path = os.path.dirname(__file__)
 
-# Paths to your certificate and private key
-# pyinstaller Sled.py --windowed -i "./sled.icns"
 PEMFILE_PATH = "Sample/path/to/certificate.pem"
 KEYFILE_PATH = "Sample/path/to/private_key.key"
 GROUP_NAME = "your group here"
@@ -215,7 +212,6 @@ class VerifyMemberPage:
 
     def verify_netids(self):
         netids = self.netid_entry.get("1.0", "end-1c").strip().splitlines()
-        # self.verification_results.clear()  # Clear previous results
         self.tree.delete(*self.tree.get_children())  # Clear the Treeview
 
         for netid in netids:
@@ -268,10 +264,8 @@ class VerifyMemberPage:
         # Enable Add Users button if there is text in the entry box
         if self.netid_entry.get("1.0", "end-1c").strip():
             self.export_btn.config(state=tk.NORMAL)
-            # self.netid_verify_btn.config(state=tk.NORMAL)
         else:
             self.export_btn.config(state=tk.DISABLED)
-            # self.netid_verify_btn.config(state=tk.DISABLED)
 
 
 class AddUsersPage:
@@ -366,7 +360,6 @@ class AddUsersPage:
 
     def start_add_users_thread(self):
         self.add_users_btn.config(state=tk.DISABLED)
-        # self.progress.grid()  # Show the progress bar
         thread = threading.Thread(target=self.add_users)
         thread.start()
 
@@ -391,18 +384,14 @@ class AddUsersPage:
 
                 for i, future in enumerate(as_completed(futures)):
                     time.sleep(0.1)
-                    result = (
-                        future.result()
-                    )  # Result of add_user_to_group, could be True/False
+                    result = future.result()
                     results.append(result)
                     self.progress.after(0, self.update_progress, i + 1, total_users)
 
-            # Show a completion message
             self.show_results(results, "added")
         except Exception as e:
             error = e
             self.root.after(0, lambda: messagebox.showerror("Error", error))
-            # messagebox.showerror("Error", str(e))
         finally:
             # Re-enable the button and hide the progress bar
             self.add_users_btn.config(state=tk.NORMAL)
@@ -420,7 +409,6 @@ class AddUsersPage:
                 0,
                 lambda: messagebox.showerror("Error", error_message),
             )
-            # messagebox.showerror("Error", f"Could not add user {user_id}: {e}")
 
     def update_progress(self, current_user, total_users):
         """Update the progress bar to reflect the current progress."""
