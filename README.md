@@ -63,7 +63,7 @@ If you'd like to work within a development environment, follow these instruction
 
     #On Windows
     # May need to install Python 3.12 but this should work...
-    pyinstaller Sled.py --windowed -F "./images/sled.ico"
+    pyinstaller Sled.py -F -i "./images/sled.ico"
     
 > Note: When running in a development environment, additional configurations or tweaks can be made to the code to suit specific needs or testing purposes.
 
