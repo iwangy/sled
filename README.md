@@ -58,7 +58,12 @@ If you'd like to work within a development environment, follow these instruction
     To create an app executable or application you must run the command below on the supported hardware. ie: .exe run on Windows, .app run on Mac
 
     ```python
+    # On Mac
     pyinstaller Sled.py --windowed -i "./images/sled.icns"
+
+    #On Windows
+    # May need to install Python 3.12 but this should work...
+    pyinstaller Sled.py --windowed -F "./images/sled.ico"
     
 > Note: When running in a development environment, additional configurations or tweaks can be made to the code to suit specific needs or testing purposes.
 
