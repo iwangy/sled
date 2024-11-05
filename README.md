@@ -1,4 +1,4 @@
-# SLED: A UW Groups Web Service interface 
+# SLED: UW Groups Web Service Interface 
 
 <img src="./images/sledlogo.png" alt="courier logo" width="300"/>
 
