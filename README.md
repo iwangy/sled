@@ -1,5 +1,4 @@
-# sled
-SLED: A UW Groups Web Service interface 
+# SLED: A UW Groups Web Service interface 
 
 <img src="./images/sledlogo.png" alt="courier logo" width="300"/>
 
@@ -22,7 +21,7 @@ This application can be used in two ways: either by running the prebuilt `.app` 
 
 If you'd like to use the app without setting up a development environment, follow these steps:
 
-1. **Download the `.app` file** from the provided link or release page.
+1. **Download the `.app` file** from the provided release page.
 2. Move the `.app` file to your Applications folder or any desired location.
 3. **Double-click the `.app` file** to launch the application.
 
@@ -40,16 +39,29 @@ If you'd like to work within a development environment, follow these instruction
 2. **Setup a virtual environment (recommended)**
     ```python
     python3 -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    source venv/bin/activate  
+    # On Windows, use `venv\Scripts\activate`
 
-3. **Obtain the UW Groups Web Service API certificate and private key:**
+3. **Install dependencies**
+    ```python
+    pip install -r requirements.txt
+
+4. **Obtain the UW Groups Web Service API certificate and private key:**
 - Follow UW API Documentation to request and download your certificate and private key files.
 - Save these files securely on your machine.
 
-4. Run the application:
+5. **Run the application:**
     ```python
     python sled.py
+
+6. **To package the installation into an .exe or .app**
+    To create an app executable or application you must run the command below on the supported hardware. ie: .exe run on Windows, .app run on Mac
+
+    ```python
+    pyinstaller Sled.py --windowed -i "./images/sled.icns"
     
 > Note: When running in a development environment, additional configurations or tweaks can be made to the code to suit specific needs or testing purposes.
 
-### Option 2: Running in a Development Environment & Create .app or .exe
+## How to obtain credentials for GWS API
+
+wip
