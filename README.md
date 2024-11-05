@@ -17,13 +17,13 @@ This project is a Group/NetID Management Application developed using Python and 
 
 This application can be used in two ways: either by running the prebuilt `.app` or `.exe` file or by setting up a development environment. Follow the instructions below based on your preference.
 
-### Option 1: Running the Prebuilt `.app` File
+### Option 1: Running the Prebuilt `.pkg` or `.zip` File
 
 If you'd like to use the app without setting up a development environment, follow these steps:
 
-1. **Download the `.app` file** from the provided release page.
-2. Move the `.app` file to your Applications folder or any desired location.
-3. **Double-click the `.app` file** to launch the application.
+1. **Download the `.pkg` or `.zip` file** from the provided release page.
+2. Run the `.pkg` file or unzip the `.zip` to your Applications folder or any desired location.
+3. **Double-click the `.app` or `.exe` file** to launch the application.
 
 > **Note**: You will need to obtain a certificate and private key to connect to the UW Groups Web Service API. Follow the instructions below for obtaining and configuring these credentials.
 
