@@ -8,8 +8,8 @@ This project is a Group/NetID Management Application developed using Python and 
 
 ## Features
 
-- **Batch NetID Additions/Deletions**: Add/Delete multiple NetIDs to organizational groups quickly and efficiently.
-- **Batch NetID Group Verification**: Check group membership of a NetID.
+- **Batch NetID Additions/Deletions**: Add/Delete multiple NetIDs to organizational groups quickly and efficiently, import & export lists.
+- **Batch NetID Group Verification**: Check group membership of a NetID, import & export lists.
 - **Configurable Settings**: Easily configure the certificate and key file paths, group names, and API endpoints through a settings page.
 
 
