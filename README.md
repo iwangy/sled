@@ -2,7 +2,7 @@
 
 <img src="./images/sledlogo.png" alt="courier logo" width="300"/>
 
-This project is a Group/NetID Management Application developed using Python and Tkinter. The application is designed to streamline and accelerate batch NetID additions, deletions, and verifications to organizational groups via a REST API, significantly improving efficiency for group and NetID management tasks.
+This project is a Group/NetID Management Application (Win/MacOS) developed using Python and Tkinter. The application is designed to streamline and accelerate batch NetID additions, deletions, and verifications to organizational groups via a REST API, significantly improving efficiency for group and NetID management tasks.
 
 <img src="./images/sledsc.png" alt="courier logo" width="500"/>
 
