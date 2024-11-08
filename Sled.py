@@ -401,6 +401,12 @@ class AddUsersPage:
         try:
             reqURL = URL + f"group/{GROUP_NAME}/member/{user_id}"
             response = session.put(reqURL)
+
+            # Check for 401 Unauthorized error specifically
+            if response.status_code == 401:
+                messagebox.showerror("Authorization Error", "The account associated with this Cert is not a Group Manager")
+                return  # Quit the operation on 401
+            
             response.raise_for_status()
             return f"{user_id}"
         except requests.exceptions.RequestException as e:
@@ -564,6 +570,12 @@ class DeleteUsersPage:
         try:
             reqURL = URL + f"group/{GROUP_NAME}/member/{user_id}"
             response = session.delete(reqURL)
+
+            # Check for 401 Unauthorized error specifically
+            if response.status_code == 401:
+                messagebox.showerror("Authorization Error", "The account associated with this Cert is not a Group Manager")
+                return  # Quit the operation on 401
+        
             response.raise_for_status()
             return f"{user_id}"
         except requests.exceptions.RequestException as e:
