@@ -2,14 +2,14 @@
 
 <img src="./images/sledlogo.png" alt="courier logo" width="300"/>
 
-This project is a Group/NetID Management Application developed using Python and Tkinter. The application is designed to streamline and accelerate batch NetID additions, deletions, and verifications to organizational groups via a REST API, significantly improving efficiency for group and NetID management tasks.
+This project is a Group/NetID Management Application (Win/MacOS) developed using Python and Tkinter. The application is designed to streamline and accelerate batch NetID additions, deletions, and verifications to organizational groups via a REST API, significantly improving efficiency for group and NetID management tasks.
 
 <img src="./images/sledsc.png" alt="courier logo" width="500"/>
 
 ## Features
 
-- **Batch NetID Additions/Deletions**: Add/Delete multiple NetIDs to organizational groups quickly and efficiently.
-- **Batch NetID Group Verification**: Check group membership of a NetID.
+- **Batch NetID Additions/Deletions**: Add/Delete multiple NetIDs to organizational groups quickly and efficiently, import & export lists.
+- **Batch NetID Group Verification**: Check group membership of a NetID, import & export lists.
 - **Configurable Settings**: Easily configure the certificate and key file paths, group names, and API endpoints through a settings page.
 
 
@@ -17,13 +17,13 @@ This project is a Group/NetID Management Application developed using Python and 
 
 This application can be used in two ways: either by running the prebuilt `.app` or `.exe` file or by setting up a development environment. Follow the instructions below based on your preference.
 
-### Option 1: Running the Prebuilt `.app` File
+### Option 1: Running the Prebuilt `.pkg` or `.zip` File
 
 If you'd like to use the app without setting up a development environment, follow these steps:
 
-1. **Download the `.app` file** from the provided release page.
-2. Move the `.app` file to your Applications folder or any desired location.
-3. **Double-click the `.app` file** to launch the application.
+1. **Download the `.pkg` or `.zip` file** from the provided release page.
+2. Run the `.pkg` file or unzip the `.zip` to your Applications folder or any desired location.
+3. **Double-click the `.app` or `.exe` file** to launch the application.
 
 > **Note**: You will need to obtain a certificate and private key to connect to the UW Groups Web Service API. Follow the instructions below for obtaining and configuring these credentials.
 
@@ -63,7 +63,7 @@ If you'd like to work within a development environment, follow these instruction
 
     #On Windows
     # May need to install Python 3.12 but this should work...
-    pyinstaller Sled.py --windowed -F "./images/sled.ico"
+    pyinstaller Sled.py -F -i "./images/sled.ico"
     
 > Note: When running in a development environment, additional configurations or tweaks can be made to the code to suit specific needs or testing purposes.
 
